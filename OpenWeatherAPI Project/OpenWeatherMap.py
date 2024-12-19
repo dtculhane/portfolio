@@ -12,7 +12,7 @@ import string
 # Functions to call Geocoding API for latitude/longitude
 # Details for API found at https://openweathermap.org/api/geocoding-api; Used for zip_location, city_location functions
 def zip_location(zip_code):  # For location by entering zip code
-    api_key = '746b020611296a310f73f333c4415c0d'  # Personal API key for OpenWeather
+    api_key = '**********************'  # Personal API key for OpenWeather
     country_code = 'US'  # ISO-3166 country code for the United States
     url = "http://api.openweathermap.org/geo/1.0/zip?zip={},{}&appid={}".format(
         zip_code, country_code, api_key)
@@ -46,7 +46,7 @@ def zip_location(zip_code):  # For location by entering zip code
 
 
 def city_location(city, state):  # For location by entering city and state
-    api_key = '746b020611296a310f73f333c4415c0d'  # Personal API key for OpenWeather
+    api_key = '**********************'  # Personal API key for OpenWeather
     country_code = 'US'  # ISO-3166 country code for the United States
     url = 'http://api.openweathermap.org/geo/1.0/direct?q={},{},{}&limit=1&appid={}'.format(
         city, state, country_code, api_key)
@@ -86,7 +86,7 @@ def city_location(city, state):  # For location by entering city and state
 # using lat/lon information. This will save time with wrestling with upper vs lower case, so we'll use the information
 # from OpenWeather
 def reverse_lookup(latitude, longitude):
-    api_key = '746b020611296a310f73f333c4415c0d'  # Personal API key for OpenWeather
+    api_key = '**********************'  # Personal API key for OpenWeather
     url = 'http://api.openweathermap.org/geo/1.0/reverse?lat={}&lon={}&appid={}'.format(
         latitude, longitude, api_key)
     try:
@@ -120,7 +120,7 @@ def reverse_lookup(latitude, longitude):
 # Function to call OpenWeather Map API for current weather.
 # Details for API found at https://openweathermap.org/current#data
 def current_weather(latitude, longitude, unit):
-    api_key = '746b020611296a310f73f333c4415c0d'
+    api_key = '**********************'
     # Conditional block to determine if/what the unit_suffix for the API call should be.
     if unit == 'kelvin':
         unit_suffix = ''  # Blank suffix since Kelvin is the API default and has no suffix
