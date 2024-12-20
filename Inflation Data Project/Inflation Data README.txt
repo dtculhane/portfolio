@@ -1,9 +1,0 @@
-Inflation Datapreparation README
-
-This data preparation project was done as a term project for DSC540 - Data Preparation. The premise was to combine data from various sources (a flat file, data scraped from a website, and data from a called API) into a single dataset. The central theme for the data was data regarding inflation around the globe. The flat data came in the form of a CSV from the World Bank, the scraped web data came from Wikipedia (stored in the file to future-proof the code from future edits of the site) and used UN inflation data, and the API data came from the OpenNews API.
-
-The idea was to bring all of the data together into a single dataframe where each row was a single country with periodic data from the World Bank and UN as well as a cell containing a list of news aritcles selected from a OpenNews API call. Information about inflation can be gleaned from the data provided by the World Bank and UN while the list of text articles for each country could be analyzed for additional contextual information.
-
-Each coding milestone of the project addressed a different aspect: 2 - working with the flat file, 3 - scraping and working with the web data, 4 - calling the OpenNews API and working with that data, and 5 - merging all three indivdual datasets together.
-
-The project itself hit a snag towards the end due to the limited scope of free access to OpenNews. Only 50 calls could be made in a 12 hour period with a limit of 100 calls in a day within the free tier of use. This limited the dataset to only 50 countries since the script was intended to be run once for grading. However, the premise of the API call outside of an educational setting could end up being adapted.
