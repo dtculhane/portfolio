@@ -1,7 +1,7 @@
 Retail Sales Projections Project README
 David Culhane
 
-This project was done as the term project for Bellevue University's DSC630 - Predictive Analytics. Its purpose was to use a large retail sales dataset to project retail sales in Python. The end product used SARIMA models from statsmodels and pmdarima to make the projections and were compared to each other.
+This project intends to use a large retail sales dataset to project retail sales in Python. The end product used SARIMA models from statsmodels and pmdarima to make the projections and were compared to each other.
 
 The data used was sourced from Kaggle and came in three flat sources describing weekly sales at numerous stores, across numerous departments in each store, and information regarding economic metrics in each store's area. 
 
