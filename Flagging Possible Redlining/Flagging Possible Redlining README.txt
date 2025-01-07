@@ -1,0 +1,13 @@
+Flagging Redlining Cases
+David Culhane
+
+
+This project uses data from a lending institution to try to detect cases of redlining. The execution of this process would entail training a model on mortgage data using a dataset that includes race, ethnic, sex, property, economic, and loan information of applicants and their applications. The model would then be able to predict which applications should or should not have been approved, in its eyes. Summary statistics of economic data from those the model would approve can then be used as a baseline to look through the denied applications to flag cases for human investigation - denied applications with approvable economic data.
+
+The data spans six months of applications with a lending institution. Data preparation entailed two steps, simplifying the data regarding applicants' race, ethnicity, and sex; and simplifying their economic and loan information. For the race, ethnicity, and sex data, helper functions identify columns to each application and use Boolean values to indicate membership with a race, ethnicity, or sex. The various columns are simplified to 8 from more than 80. For economic and loan data, columns are selected to best show the economic merits of applications and to simplify the loan information. The final modeling dataset contains 17 fields, down from more than 200.
+
+A cross-validated grid search is run with various hyperparameters for logistic regression and random forest classification models, all drawn from the Scikit-Learn library. The data is scaled using a min/max scaler and missing values are imputed with the median value.
+
+Once the final model is selected, it is used to make predictions on the testing data. The applications that the model would approve can then be used to select the criteria used to filter through the denied applications. Credit score and total income are used from the approved applications to find denied applications that should have been approved by economic merit. Any applications found could be flagged for further investigation by human eyes.
+
+It should be noted that the intention of this project is to give lenders an opportunity to catch possible cases of redlining and rectify them before the institution faces steeper consequences. The model that is trained is not intended to make decisions about whether or not applicants should be given loans. This process is to take place after the fact.
