@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Loading and Plotting the Data
 
-The first part of this assignment will be using the binary and trinary classification CSVs to classify the datapoints in them using k-nearest neighbors algorithms. The first thing to do would be to load the datasets and plot them individually in order to get an idea of what we're looking at.
+The first part of this project will be using the binary and trinary classification CSVs to classify the datapoints in them using k-nearest neighbors algorithms. The first thing to do would be to load the datasets and plot them individually in order to get an idea of what we're looking at.
 
 ```{r}
 # Loading the files
