@@ -1,0 +1,8 @@
+Predicting Diabetes with a Neural Network README
+David Culhane
+
+This script uses data acquired on Kaggle to train a neural network, BrimNet, to predict if a patient has diabetes. The neural network is built using PyTorch and is scored using Scikit-Learn metric functions. The dataset was imbalanced with 8.5% of data belonging to the target class.
+
+The numeric data was standardized by z-score conversion while the categorical/Boolean data was kept as-is after one-hot encoding. From there, training and testing sets were subset and then converted into tensors for model training.
+
+BrimNet performed well overall, with a raw accuracy of 97%. However, a recall score of around 66% indicates some difficulty with positively identifying diabetes cases in the lower spectrum of blood glucose and A1C levels. Additional modification and testing would be required to improve that metric.
